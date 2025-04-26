@@ -45,10 +45,9 @@ public class ConnectionManager {
 
   public void initTables() {
     try {
-      URI path = Objects.requireNonNull(App.class.getClassLoader().getResource("initTableWithDummyData.sql"))
-          .toURI();
+      URI path = Objects.requireNonNull(App.class.getClassLoader().getResource("initTableWithDummyData.sql")).toURI();
       var sql = new String(Files.readAllBytes(Paths.get(path)));
-      // System.out.println(sql);
+      //System.out.println(sql);
       Statement statement = (Statement) connection.createStatement();
       statement.executeUpdate(sql);
       statement.close();

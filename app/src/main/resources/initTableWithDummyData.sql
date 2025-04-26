@@ -28,7 +28,6 @@ CREATE TABLE wedstrijd(
     FOREIGN KEY (winnaar) REFERENCES speler(tennisvlaanderenid) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
 CREATE TABLE speler_speelt_tornooi(
     id INT AUTO_INCREMENT PRIMARY KEY,
     speler INT NOT NULL,
